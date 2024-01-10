@@ -1,0 +1,268 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 20px;">
+    <div class="card">
+        <div class="card-header text-center">
+            <h3><b>Diamond Price Prediction</b></h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header text-center"><h5><b>Diamond Price Data Input</b></h5></div>
+                        <form id="inputForm">
+                        <div class="card-body">                            
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">CARAT</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="number" name="size" id="crimInputBoxId" value = "0">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">COLOR</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <!-- <input class="form-control" type="text" name="COLOR" id="" value = "0"> -->
+                                    <select name = "color" class="form-control">
+                                        <option value = "Not Selected" selected>Not Selected</option>
+                                        <option value = "D">D</option>
+                                        <option value = "E">E</option>
+                                        <option value = "F">F</option>
+                                        <option value = "G">G</option>
+                                        <option value = "H">H</option>
+                                        <option value = "I">I</option>
+                                        <option value = "J">J</option>
+                                        <option value = "K">K</option>
+                                        <option value = "L">L</option>
+                                        <option value = "M">M</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">CLARITY</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <select name = "clarity" class="form-control">
+                                        <option value = "Not Selected" selected>Not Selected</option>
+                                        <option value = "IF">IF</option>
+                                        <option value = "VVS1">VVS1</option>
+                                        <option value = "VVS2">VVS2</option>
+                                        <option value = "VS1">VS1</option>
+                                        <option value = "VS2">VS2</option>
+                                        <option value = "SI1">SI1</option>
+                                        <option value = "SI2">SI2</option>
+                                        <option value = "SI3">SI3</option>
+                                        <option value = "I1">I1</option>
+                                        <option value = "I2">I2</option>
+                                        <option value = "I3">I3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">CUT</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <select name = "cut" class="form-control">
+                                        <option value = "Not Selected" selected>Not Selected</option>
+                                        <option value = "EX">EX</option>
+                                        <option value = "VG">VG</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">SYMMETRY</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <select name = "symmetry" class="form-control">
+                                        <option value = "Not Selected" selected>Not Selected</option>
+                                        <option value = "EX">EX</option>
+                                        <option value = "VG">VG</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">POLISH</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <select name = "polish" class="form-control">
+                                        <option value = "Not Selected" selected>Not Selected</option>
+                                        <option value = "EX">EX</option>
+                                        <option value = "VG">VG</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">FLOURESCENCE</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <select name = "fluor_intensity" class="form-control">
+                                        <option value = "Not Selected" selected>Not Selected</option>
+                                        <option value = "NON">NON</option>
+                                        <option value = "FNT">FNT</option>
+                                        <option value = "MED">MED</option>
+                                        <option value = "STG">STG</option>
+                                        <option value = "VST">VST</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">DEPTH PERCENTAGE</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="number" name="depth_percent" id="" value = "0">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">TABLE PERCENTAGE</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="number" name="table_percent" id="" value = "0">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">RATIO</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="number" name="ratio" id="" value = "0">
+                                </div>
+                            </div>
+                            <br>
+                            <!-- <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">LENGTH</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="number" name="meas_length" id="crimInputBoxId" value = "0">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">WIDTH</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="number" name="meas_width" id="crimInputBoxId" value = "0">
+                                </div>
+                            </div>
+                            <br> -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">GIRDLE_MIN</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <!-- <input class="form-control" type="text" name="COLOR" id="" value = "0"> -->
+                                    <select name = "girdle_min" class="form-control">
+                                        <option value = "Not Selected" selected>Not Selected</option>
+                                        <option value = "XTN">XTN</option>
+                                        <option value = "VTN">VTN</option>
+                                        <option value = "STN">STN</option>
+                                        <option value = "TN">TN</option>
+                                        <option value = "M">M</option>
+                                        <option value = "TK">TK</option>
+                                        <option value = "STK">STK</option>
+                                        <option value = "VTK">VTK</option>
+                                        <option value = "XTK">XTK</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">GIRDLE_MAX</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <!-- <input class="form-control" type="text" name="COLOR" id="" value = "0"> -->
+                                    <select name = "girdle_max" class="form-control">
+                                        <option value = "Not Selected" selected>Not Selected</option>
+                                        <option value = "XTN">XTN</option>
+                                        <option value = "VTN">VTN</option>
+                                        <option value = "STN">STN</option>
+                                        <option value = "TN">TN</option>
+                                        <option value = "M">M</option>
+                                        <option value = "TK">TK</option>
+                                        <option value = "STK">STK</option>
+                                        <option value = "VTK">VTK</option>
+                                        <option value = "XTK">XTK</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">CULET_SIZE</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <select name = "culet_size" class="form-control">
+                                        <option value = "Not Selected" selected>Not Selected</option>
+                                        <option value = "N">N</option>
+                                        <option value = "VS">VS</option>
+                                        <option value = "S">S</option>
+                                        <option value = "M">M</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card-footer text-center">
+                                <button type = "button" class="btn btn-info" onclick="getResult()" value = "submit" style="cursor: pointer;">Predict</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                    <div class="card-header text-center"><h5><b>Prediction Result</b></h5></div>
+                    <div class="card-body">
+                        <div class="row">
+                            Predicted Diamond price is: $ &nbsp;&nbsp; <span style="color:rgb(85, 19, 19)"><p id="result"></p></span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function getResult(){
+        $("#progressBar").modal('show')
+        $.ajax({
+           type: "POST",
+           url: "{{url_for('getResponseRandomForestReg')}}",
+           data: $('#inputForm').serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+              $("#result").html(data); 
+           },complete:function()
+           {
+            $("#progressBar").modal('hide')
+           }
+         });
+    }
+</script>
+
+{% endblock %}
